@@ -22,3 +22,9 @@ test('returns the default empty array when there is no data to map through', () 
   const wrapper = shallow(<SearchResults />);
   expect(wrapper).toMatchSnapshot();
 })
+
+//no break without articles
+test('does not break without articles', () => {
+  const wrapper = shallow(<SearchResults />);
+  expect(wrapper.find('li')).toHaveLength(0);
+})
