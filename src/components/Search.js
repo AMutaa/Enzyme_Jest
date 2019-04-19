@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import SearchResults from './SearchResults';
+import PropTypes from 'prop-types';
 
 class Search extends Component {
   state = {
@@ -35,8 +37,8 @@ class Search extends Component {
 }
 
 
-Search.proptypes = {
+Search.propTypes = {
   performSearch: PropTypes.func,
-  articles: PropsTypes.array
+  articles: PropTypes.array
 }
 export default Search

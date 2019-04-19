@@ -13,7 +13,7 @@ const SearchResults = ({ articles = [] }) => (
   </ul>
 )
 
-SearchResults.PropTypes = {
+SearchResults.propTypes = {
   articles: PropTypes.array
 }
 
