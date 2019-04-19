@@ -9,10 +9,16 @@ const mockArticles = [
   }
 ]
 
+//Snapshot testing
 describe('SearchResults component', () => {
   test('renders', () => {
     const wrapper = shallow(<SearchResults articles={mockArticles} />)
     expect(wrapper).toMatchSnapshot();
   })
+})
 
+//empty array of articles, component still renders
+test('returns the default empty array when there is no data to map through', () => {
+  const wrapper = shallow(<SearchResults />);
+  expect(wrapper).toMatchSnapshot();
 })
