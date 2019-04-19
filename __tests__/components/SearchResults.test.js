@@ -28,3 +28,8 @@ test('does not break without articles', () => {
   const wrapper = shallow(<SearchResults />);
   expect(wrapper.find('li')).toHaveLength(0);
 })
+
+test('does not break with an empty array', () => {
+  const wrapper = shallow(<SearchResults articles={[]} />);
+  expect(wrapper.find('li')).toHaveLength(0);
+})
