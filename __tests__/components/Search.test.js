@@ -35,3 +35,12 @@ test('when the form is submitted the event is cancelled', () => {
   expect(prevented).toBe(true)
 })
 
+// renders search result when the articles state changes
+test('renders search results when the articles change', () => {
+  const wrapper = mount(<Search articles={[]} />)
+  wrapper.setProps({
+    articles: [{ url: 'http://google.com', title: 'Google Search' }]
+  })
+  expect(wrapper.find('a').prop('href')).toEqual('http://google.com')
+})
+
