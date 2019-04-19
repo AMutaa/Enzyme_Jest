@@ -1,8 +1,7 @@
-import { API_KEY } from '../../config.js';
 
 const fetchArticles = (event) => {
   return fetch(
-    `http://content.guardianapis.com/search?q=${event}&api-key=${API_KEY}`
+    `https://newsapi.org/v2/top-headlines?country=${event}&apiKey=595cd4bc2f8742a49aacce2aa3d1f446`
   ).then(response => response.json())
 }
 
