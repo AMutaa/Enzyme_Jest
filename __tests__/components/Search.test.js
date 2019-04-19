@@ -33,6 +33,7 @@ test('when the form is submitted the event is cancelled', () => {
     }
   })
   expect(prevented).toBe(true)
+
 })
 
 // renders search result when the articles state changes
