@@ -23,4 +23,15 @@ test('user text is echoed ', () => {
 })
 
 
+//form is submitted, event cancelled(default browser function isn't fired)
+test('when the form is submitted the event is cancelled', () => {
+  const wrapper = shallow(<Search />);
+  let prevented = false;
+  wrapper.find('form').simulate('submit', {
+    preventDefault: () => {
+      prevented = true;
+    }
+  })
+  expect(prevented).toBe(true)
+})
 
