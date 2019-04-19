@@ -8,5 +8,6 @@ describe('Search component', () => {
     expect(wrapper.exists()).toBe(true)
   })
 })
+test()
 
 
