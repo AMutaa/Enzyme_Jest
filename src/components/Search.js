@@ -7,14 +7,14 @@ class Search extends Component {
     value: ''
   }
 
-  handleChange = (e) => {
-    let value = e.target.value;
-    this.setState({
-      value
-    })
+  handleChange = (event) => {
+    let value = event.target.value;
+    this.setState({ value })
+    this.props.performSearch(value);
   }
-  handleSubmit = (e) => {
-    e.preventDefault();
+
+  handleSubmit = (event) => {
+    event.preventDefault();
 
   }
 

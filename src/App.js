@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Search from './components/Search'
+import SearchCont from './components/SearchCont'
 import './App.css'
 
 
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <h1>Enzyme</h1>
-        <Search />
+        <SearchCont />
       </div>
     )
   }
