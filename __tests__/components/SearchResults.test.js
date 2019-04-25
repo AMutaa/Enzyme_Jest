@@ -17,6 +17,13 @@ describe('SearchResults component', () => {
   })
 })
 
+test('should render a ul', () => {
+  const wrapper = shallow(<SearchResults />)
+  const uls = wrapper.find("ul")
+  expect(uls.length).toBeGreaterThan(0)
+})
+
+
 //empty array of articles, component still renders
 test('returns the default empty array when there is no data to map through', () => {
   const wrapper = shallow(<SearchResults />);
