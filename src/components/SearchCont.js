@@ -9,7 +9,7 @@ class SearchCont extends Component {
 
   performSearch = (event) => {
     return fetchArticles(event).then(data =>
-      this.setState({ articles: data.articles })
+      this.setState({ articles: data.response.articles })
     )
   }
 
